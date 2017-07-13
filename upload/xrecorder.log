@@ -1,0 +1,263 @@
+2017-07-04 15:32:00,056 INFO[DefaultQuartzScheduler_Worker-1](DBConnectionPool.java13)-InitDataSource.....
+2017-07-04 15:32:00,056ERROR[DefaultQuartzScheduler_Worker-1](JobRunShell.java211)-Job EXTJWEB_JOBGROUP_NAME.Task threw an unhandled Exception: 
+java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource
+	at com.egoo.druid.config.DBConfigure.initDataSource(DBConfigure.java:93)
+	at com.egoo.db.druid.connector.DBConnectionPool.Start(DBConnectionPool.java:14)
+	at DBScan.DB_Connection(DBScan.java:23)
+	at Task.execute(Task.java:14)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 6 more
+2017-07-04 15:32:00,056ERROR[DefaultQuartzScheduler_Worker-1](QuartzScheduler.java2185)-Job (EXTJWEB_JOBGROUP_NAME.Task threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:525)
+Caused by: java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource
+	at com.egoo.druid.config.DBConfigure.initDataSource(DBConfigure.java:93)
+	at com.egoo.db.druid.connector.DBConnectionPool.Start(DBConnectionPool.java:14)
+	at DBScan.DB_Connection(DBScan.java:23)
+	at Task.execute(Task.java:14)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 6 more
+2017-07-04 15:36:00,073 INFO[DefaultQuartzScheduler_Worker-1](DBConnectionPool.java13)-InitDataSource.....
+2017-07-04 15:36:00,182 INFO[DefaultQuartzScheduler_Worker-1](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-04 15:36:00,198 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:36:01,508 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-04 15:36:01,508 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:36:02,008 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:36:02,554 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:36:02,600 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java230)-update record_info set record_url = 'http://egoooss.oss-cn-shanghai.aliyuncs.com/egoo/2cfe00572310424792de89ebdc23d9f7.xml',is_location = '0' where record_id = 'liuchuanlc'
+2017-07-04 15:36:02,694 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java243)-update=94
+2017-07-04 15:36:02,928 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:36:03,474 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:36:03,568 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java230)-update record_info set record_url = 'http://egoooss.oss-cn-shanghai.aliyuncs.com/egoo/35ce67e11b4943298e8c6e59a1add4ea.iml',is_location = '0' where record_id = 'liuchuanab'
+2017-07-04 15:36:03,646 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java243)-update=78
+2017-07-04 15:52:44,180 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-04 15:52:44,274 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-04 15:52:44,352 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-04 15:52:44,383 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-04 15:52:44,383 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-04 15:52:44,383 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-04 15:52:44,383 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-04 15:52:44,383 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-04 15:52:44,399 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-04 15:54:00,026 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:54:01,009 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-04 15:54:01,009 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:54:01,461 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:54:02,194 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:54:02,257 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java230)-update record_info set record_url = 'http://egoooss.oss-cn-shanghai.aliyuncs.com/egoo/ebce6e0c021140a7801b76e8500720dd.xml',is_location = '0' where record_id = 'liuchuanzhang'
+2017-07-04 15:54:02,382 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java243)-update=125
+2017-07-04 15:54:02,569 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-04 15:54:03,435 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-04 15:54:03,528 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java230)-update record_info set record_url = 'http://egoooss.oss-cn-shanghai.aliyuncs.com/egoo/f24af6ce251a4dce87d85e4f7af7afbc.ini',is_location = '0' where record_id = 'liuchuanyu'
+2017-07-04 15:54:03,653 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java243)-update=125
+2017-07-10 16:41:48,185 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 16:41:48,804 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 16:41:49,045 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 16:41:49,067 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 16:41:49,067 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 16:41:49,070 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 16:41:49,071 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 16:41:49,071 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 16:41:49,148 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 16:42:57,195 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 16:42:57,302 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 16:42:57,369 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 16:42:57,390 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 16:42:57,391 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 16:42:57,393 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 16:42:57,393 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 16:42:57,393 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 16:42:57,412 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 16:45:00,047 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 16:45:01,101 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 16:45:01,110 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 16:48:20,660 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 16:48:20,752 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 16:48:20,814 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 16:48:20,834 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 16:48:20,834 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 16:48:20,836 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 16:48:20,837 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 16:48:20,837 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 16:48:20,854 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 16:50:00,022 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 16:50:01,078 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 16:50:01,088 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 16:57:35,705 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 16:57:35,801 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 16:57:35,877 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 16:57:35,903 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 16:57:35,903 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 16:57:35,906 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 16:57:35,907 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 16:57:35,907 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 16:57:35,928 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 16:58:04,428 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 16:58:04,508 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 16:58:04,572 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 16:58:04,596 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 16:58:04,596 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 16:58:04,599 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 16:58:04,599 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 16:58:04,600 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 16:58:04,617 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 16:59:00,023 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 16:59:01,196 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 16:59:01,208 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:01:36,707 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:01:36,801 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:01:36,871 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:01:36,902 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:01:36,902 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:01:36,902 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:01:36,902 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:01:36,902 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:01:36,918 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:02:00,016 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:02:01,051 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:02:01,067 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:03:25,826 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:03:25,920 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:03:25,982 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:03:26,014 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:03:26,014 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:03:26,014 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:03:26,014 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:03:26,014 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:03:26,030 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:04:00,008 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:04:01,041 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:04:01,041 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:07:00,132 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:07:00,226 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:07:00,288 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:07:00,304 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:07:00,304 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:07:00,319 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:07:00,319 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:07:00,319 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:07:00,335 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:10:16,132 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:10:16,242 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:10:16,304 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:10:16,335 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:10:16,335 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:10:16,335 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:10:16,335 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:10:16,335 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:10:16,351 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:12:00,017 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:12:01,001 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:12:01,001 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:13:59,479 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:13:59,573 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:13:59,651 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:13:59,682 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:13:59,682 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:13:59,682 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:13:59,682 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:13:59,682 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:13:59,713 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:14:00,010 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:14:01,385 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:14:01,401 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:16:49,285 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:16:49,379 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:16:49,441 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:16:49,457 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:16:49,457 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:16:49,457 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:16:49,457 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:16:49,457 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:16:49,488 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:18:00,024 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:18:01,228 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:18:01,228 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-10 17:18:02,212 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java230)-update record_info set record_url = 'http://egoooss.oss-cn-shanghai.aliyuncs.com/egoo/c2d224b2460a4d63beb56b4c47f6d3eb.xml',is_location = '0' where record_id = 'liuchuan'
+2017-07-10 17:18:02,431 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java243)-update=219
+2017-07-10 17:18:58,101 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-10 17:18:58,242 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-10 17:18:58,304 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-10 17:18:58,320 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-10 17:18:58,320 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-10 17:18:58,320 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-10 17:18:58,320 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-10 17:18:58,320 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-10 17:18:58,351 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-10 17:20:00,018 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-10 17:20:01,406 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-10 17:20:01,422 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-11 10:35:39,096 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-11 10:35:39,268 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-11 10:35:39,346 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-11 10:35:39,377 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-11 10:35:39,377 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-11 10:35:39,377 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-11 10:35:39,377 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-11 10:35:39,377 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-11 10:35:39,408 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-11 10:37:00,030 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-11 10:37:01,137 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-11 10:37:01,153 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-11 10:39:03,209 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-11 10:39:03,287 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-11 10:39:03,365 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-11 10:39:03,380 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-11 10:39:03,380 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-11 10:39:03,380 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-11 10:39:03,380 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-11 10:39:03,380 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-11 10:39:03,411 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-11 10:39:10,089 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-11 10:39:10,199 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-11 10:39:10,261 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-11 10:39:10,292 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-11 10:39:10,292 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-11 10:39:10,292 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-11 10:39:10,292 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-11 10:39:10,292 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-11 10:39:10,308 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-11 10:40:00,026 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-11 10:41:24,610 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-11 10:41:24,704 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-11 10:41:24,798 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-11 10:41:24,813 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-11 10:41:24,813 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-11 10:41:24,813 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-11 10:41:24,813 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-11 10:41:24,813 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-11 10:41:24,829 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-11 10:43:00,021 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-11 10:43:01,113 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-11 10:43:01,129 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
+2017-07-11 10:45:08,239 INFO[main](DBConnectionPool.java13)-InitDataSource.....
+2017-07-11 10:45:08,317 INFO[main](DBConnectionPool.java17)-InitDataSource.....[+OK]
+2017-07-11 10:45:08,395 INFO[main](SimpleThreadPool.java258)-Job execution threads will use class loader of thread: main
+2017-07-11 10:45:08,410 INFO[main](SchedulerSignalerImpl.java63)-Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-07-11 10:45:08,410 INFO[main](QuartzScheduler.java215)-Quartz Scheduler v.1.6.1 created.
+2017-07-11 10:45:08,410 INFO[main](RAMJobStore.java141)-RAMJobStore initialized.
+2017-07-11 10:45:08,410 INFO[main](StdSchedulerFactory.java1224)-Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2017-07-11 10:45:08,410 INFO[main](StdSchedulerFactory.java1228)-Quartz scheduler version: 1.6.1
+2017-07-11 10:45:08,442 INFO[main](QuartzScheduler.java461)-Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2017-07-11 10:46:00,031 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java29)-MySQLConnector.DriverManager.getConnection...
+2017-07-11 10:46:01,045 INFO[DefaultQuartzScheduler_Worker-1](DruidDataSource.java669)-{dataSource-1} inited
+2017-07-11 10:46:01,045 INFO[DefaultQuartzScheduler_Worker-1](MySQLConnector.java40)-MySQLConnector.DriverManager.getConnection [ OK ]
